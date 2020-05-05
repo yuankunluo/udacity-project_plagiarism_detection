@@ -55,8 +55,8 @@ if __name__ == '__main__':
     
     
     ## --- Your code here --- ##
-    sc = StandardScaler()
-    train_x = sc.fit_transform(train_x)
+    #sc = StandardScaler()
+    #train_x = sc.fit_transform(train_x)
 
     ## TODO: Define a model 
     model = LinearSVC()

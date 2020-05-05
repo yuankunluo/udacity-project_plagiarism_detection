@@ -13122,7 +13122,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">confusion_matrix</span>
@@ -13135,7 +13135,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13156,7 +13156,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">role</span><span class="p">)</span>
@@ -13198,7 +13198,7 @@ sagemaker-us-east-1-425894666012
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># should be the name of directory you created to save your features data</span>
@@ -13220,7 +13220,7 @@ sagemaker-us-east-1-425894666012
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">s3_data</span><span class="p">)</span>
@@ -13251,7 +13251,7 @@ sagemaker-us-east-1-425894666012
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">sagemaker_session</span><span class="o">.</span><span class="n">list_s3_files</span><span class="p">(</span><span class="n">bucket</span><span class="o">=</span><span class="n">bucket</span><span class="p">,</span> <span class="n">key_prefix</span><span class="o">=</span><span class="n">prefix</span><span class="p">))</span>
@@ -13290,7 +13290,7 @@ sagemaker-us-east-1-425894666012
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13332,6 +13332,15 @@ sagemaker-pytorch-2020-05-04-12-06-39-820/debug-output/training_job_end.ts
 sagemaker-pytorch-2020-05-04-12-06-39-820/output/model.tar.gz
 sagemaker-pytorch-2020-05-04-12-06-39-820/source/sourcedir.tar.gz
 sagemaker-pytorch-2020-05-04-12-54-17-963/sourcedir.tar.gz
+sagemaker-scikit-learn-2020-05-04-15-53-27-073/debug-output/training_job_end.ts
+sagemaker-scikit-learn-2020-05-04-15-53-27-073/output/model.tar.gz
+sagemaker-scikit-learn-2020-05-04-15-53-27-073/source/sourcedir.tar.gz
+sagemaker-scikit-learn-2020-05-04-16-17-52-643/debug-output/training_job_end.ts
+sagemaker-scikit-learn-2020-05-04-16-17-52-643/output/model.tar.gz
+sagemaker-scikit-learn-2020-05-04-16-17-52-643/source/sourcedir.tar.gz
+sagemaker-scikit-learn-2020-05-04-16-38-14-003/debug-output/training_job_end.ts
+sagemaker-scikit-learn-2020-05-04-16-38-14-003/output/model.tar.gz
+sagemaker-scikit-learn-2020-05-04-16-38-14-003/source/sourcedir.tar.gz
 sagemaker/sentiment_rnn/train.csv
 sagemaker/sentiment_rnn/word_dict.pkl
 Test passed!
@@ -13380,7 +13389,7 @@ Test passed!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># directory can be changed to: source_sklearn or source_pytorch</span>
@@ -13458,8 +13467,8 @@ Test passed!
     
     
     <span class="ansi-white-fg">## --- Your code here --- ##</span>
-    sc = StandardScaler()
-    train_x = sc.fit_transform(train_x)
+    <span class="ansi-white-fg">#sc = StandardScaler()</span>
+    <span class="ansi-white-fg">#train_x = sc.fit_transform(train_x)</span>
 
     <span class="ansi-white-fg">## TODO: Define a model </span>
     model = LinearSVC()
@@ -13526,7 +13535,7 @@ Test passed!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your import and estimator code, here</span>
@@ -13555,7 +13564,7 @@ Test passed!
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -13580,30 +13589,30 @@ Test passed!
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2020-05-04 16:38:14 Starting - Starting the training job...
-2020-05-04 16:38:16 Starting - Launching requested ML instances......
-2020-05-04 16:39:22 Starting - Preparing the instances for training......
-2020-05-04 16:40:19 Downloading - Downloading input data...
-2020-05-04 16:41:14 Training - Training image download completed. Training in progress..<span class="ansi-blue-fg">2020-05-04 16:41:15,496 sagemaker-containers INFO     Imported framework sagemaker_sklearn_container.training</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:15,499 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:15,522 sagemaker_sklearn_container.training INFO     Invoking user training script.</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:16,937 sagemaker-containers INFO     Module train does not provide a setup.py. </span>
+<pre>2020-05-05 11:06:09 Starting - Starting the training job...
+2020-05-05 11:06:11 Starting - Launching requested ML instances......
+2020-05-05 11:07:16 Starting - Preparing the instances for training...
+2020-05-05 11:08:07 Downloading - Downloading input data...
+2020-05-05 11:08:23 Training - Downloading the training image..<span class="ansi-blue-fg">2020-05-05 11:08:43,423 sagemaker-containers INFO     Imported framework sagemaker_sklearn_container.training</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:43,425 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:43,437 sagemaker_sklearn_container.training INFO     Invoking user training script.</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:43,705 sagemaker-containers INFO     Module train does not provide a setup.py. </span>
 <span class="ansi-blue-fg">Generating setup.py</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:16,937 sagemaker-containers INFO     Generating setup.cfg</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:16,938 sagemaker-containers INFO     Generating MANIFEST.in</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:16,938 sagemaker-containers INFO     Installing module with the following command:</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:43,705 sagemaker-containers INFO     Generating setup.cfg</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:43,705 sagemaker-containers INFO     Generating MANIFEST.in</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:43,706 sagemaker-containers INFO     Installing module with the following command:</span>
 <span class="ansi-blue-fg">/miniconda3/bin/python -m pip install . </span>
 <span class="ansi-blue-fg">Processing /opt/ml/code</span>
 <span class="ansi-blue-fg">Building wheels for collected packages: train
   Building wheel for train (setup.py): started
   Building wheel for train (setup.py): finished with status &#39;done&#39;
-  Created wheel for train: filename=train-1.0.0-py2.py3-none-any.whl size=5908 sha256=e383706f82a674a99ef8d6cdb029efe72697632157453076508d4d85437bd0f7
-  Stored in directory: /tmp/pip-ephem-wheel-cache-ta6f6krg/wheels/35/24/16/37574d11bf9bde50616c67372a334f94fa8356bc7164af8ca3</span>
+  Created wheel for train: filename=train-1.0.0-py2.py3-none-any.whl size=5907 sha256=094aa3a4b0a69449e0049777848c35c6097a1ec08d3cee04671c44054d802775
+  Stored in directory: /tmp/pip-ephem-wheel-cache-nwo1yzf0/wheels/35/24/16/37574d11bf9bde50616c67372a334f94fa8356bc7164af8ca3</span>
 <span class="ansi-blue-fg">Successfully built train</span>
 <span class="ansi-blue-fg">Installing collected packages: train</span>
 <span class="ansi-blue-fg">Successfully installed train-1.0.0</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:18,519 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:18,533 sagemaker-containers INFO     Invoking user script
+<span class="ansi-blue-fg">2020-05-05 11:08:45,077 sagemaker-containers INFO     No GPUs detected (normal if no gpus installed)</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:45,090 sagemaker-containers INFO     Invoking user script
 </span>
 <span class="ansi-blue-fg">Training Env:
 </span>
@@ -13628,11 +13637,11 @@ Test passed!
     },
     &#34;input_dir&#34;: &#34;/opt/ml/input&#34;,
     &#34;is_master&#34;: true,
-    &#34;job_name&#34;: &#34;sagemaker-scikit-learn-2020-05-04-16-38-14-003&#34;,
+    &#34;job_name&#34;: &#34;sagemaker-scikit-learn-2020-05-05-11-06-08-530&#34;,
     &#34;log_level&#34;: 20,
     &#34;master_hostname&#34;: &#34;algo-1&#34;,
     &#34;model_dir&#34;: &#34;/opt/ml/model&#34;,
-    &#34;module_dir&#34;: &#34;s3://sagemaker-us-east-1-425894666012/sagemaker-scikit-learn-2020-05-04-16-38-14-003/source/sourcedir.tar.gz&#34;,
+    &#34;module_dir&#34;: &#34;s3://sagemaker-us-east-1-425894666012/sagemaker-scikit-learn-2020-05-05-11-06-08-530/source/sourcedir.tar.gz&#34;,
     &#34;module_name&#34;: &#34;train&#34;,
     &#34;network_interface_name&#34;: &#34;eth0&#34;,
     &#34;num_cpus&#34;: 4,
@@ -13671,8 +13680,8 @@ Test passed!
 <span class="ansi-blue-fg">SM_NUM_CPUS=4</span>
 <span class="ansi-blue-fg">SM_NUM_GPUS=0</span>
 <span class="ansi-blue-fg">SM_MODEL_DIR=/opt/ml/model</span>
-<span class="ansi-blue-fg">SM_MODULE_DIR=s3://sagemaker-us-east-1-425894666012/sagemaker-scikit-learn-2020-05-04-16-38-14-003/source/sourcedir.tar.gz</span>
-<span class="ansi-blue-fg">SM_TRAINING_ENV={&#34;additional_framework_parameters&#34;:{},&#34;channel_input_dirs&#34;:{&#34;train&#34;:&#34;/opt/ml/input/data/train&#34;},&#34;current_host&#34;:&#34;algo-1&#34;,&#34;framework_module&#34;:&#34;sagemaker_sklearn_container.training:main&#34;,&#34;hosts&#34;:[&#34;algo-1&#34;],&#34;hyperparameters&#34;:{},&#34;input_config_dir&#34;:&#34;/opt/ml/input/config&#34;,&#34;input_data_config&#34;:{&#34;train&#34;:{&#34;RecordWrapperType&#34;:&#34;None&#34;,&#34;S3DistributionType&#34;:&#34;FullyReplicated&#34;,&#34;TrainingInputMode&#34;:&#34;File&#34;}},&#34;input_dir&#34;:&#34;/opt/ml/input&#34;,&#34;is_master&#34;:true,&#34;job_name&#34;:&#34;sagemaker-scikit-learn-2020-05-04-16-38-14-003&#34;,&#34;log_level&#34;:20,&#34;master_hostname&#34;:&#34;algo-1&#34;,&#34;model_dir&#34;:&#34;/opt/ml/model&#34;,&#34;module_dir&#34;:&#34;s3://sagemaker-us-east-1-425894666012/sagemaker-scikit-learn-2020-05-04-16-38-14-003/source/sourcedir.tar.gz&#34;,&#34;module_name&#34;:&#34;train&#34;,&#34;network_interface_name&#34;:&#34;eth0&#34;,&#34;num_cpus&#34;:4,&#34;num_gpus&#34;:0,&#34;output_data_dir&#34;:&#34;/opt/ml/output/data&#34;,&#34;output_dir&#34;:&#34;/opt/ml/output&#34;,&#34;output_intermediate_dir&#34;:&#34;/opt/ml/output/intermediate&#34;,&#34;resource_config&#34;:{&#34;current_host&#34;:&#34;algo-1&#34;,&#34;hosts&#34;:[&#34;algo-1&#34;],&#34;network_interface_name&#34;:&#34;eth0&#34;},&#34;user_entry_point&#34;:&#34;train.py&#34;}</span>
+<span class="ansi-blue-fg">SM_MODULE_DIR=s3://sagemaker-us-east-1-425894666012/sagemaker-scikit-learn-2020-05-05-11-06-08-530/source/sourcedir.tar.gz</span>
+<span class="ansi-blue-fg">SM_TRAINING_ENV={&#34;additional_framework_parameters&#34;:{},&#34;channel_input_dirs&#34;:{&#34;train&#34;:&#34;/opt/ml/input/data/train&#34;},&#34;current_host&#34;:&#34;algo-1&#34;,&#34;framework_module&#34;:&#34;sagemaker_sklearn_container.training:main&#34;,&#34;hosts&#34;:[&#34;algo-1&#34;],&#34;hyperparameters&#34;:{},&#34;input_config_dir&#34;:&#34;/opt/ml/input/config&#34;,&#34;input_data_config&#34;:{&#34;train&#34;:{&#34;RecordWrapperType&#34;:&#34;None&#34;,&#34;S3DistributionType&#34;:&#34;FullyReplicated&#34;,&#34;TrainingInputMode&#34;:&#34;File&#34;}},&#34;input_dir&#34;:&#34;/opt/ml/input&#34;,&#34;is_master&#34;:true,&#34;job_name&#34;:&#34;sagemaker-scikit-learn-2020-05-05-11-06-08-530&#34;,&#34;log_level&#34;:20,&#34;master_hostname&#34;:&#34;algo-1&#34;,&#34;model_dir&#34;:&#34;/opt/ml/model&#34;,&#34;module_dir&#34;:&#34;s3://sagemaker-us-east-1-425894666012/sagemaker-scikit-learn-2020-05-05-11-06-08-530/source/sourcedir.tar.gz&#34;,&#34;module_name&#34;:&#34;train&#34;,&#34;network_interface_name&#34;:&#34;eth0&#34;,&#34;num_cpus&#34;:4,&#34;num_gpus&#34;:0,&#34;output_data_dir&#34;:&#34;/opt/ml/output/data&#34;,&#34;output_dir&#34;:&#34;/opt/ml/output&#34;,&#34;output_intermediate_dir&#34;:&#34;/opt/ml/output/intermediate&#34;,&#34;resource_config&#34;:{&#34;current_host&#34;:&#34;algo-1&#34;,&#34;hosts&#34;:[&#34;algo-1&#34;],&#34;network_interface_name&#34;:&#34;eth0&#34;},&#34;user_entry_point&#34;:&#34;train.py&#34;}</span>
 <span class="ansi-blue-fg">SM_USER_ARGS=[]</span>
 <span class="ansi-blue-fg">SM_OUTPUT_INTERMEDIATE_DIR=/opt/ml/output/intermediate</span>
 <span class="ansi-blue-fg">SM_CHANNEL_TRAIN=/opt/ml/input/data/train</span>
@@ -13685,14 +13694,14 @@ Test passed!
 </span>
 <span class="ansi-blue-fg">/miniconda3/lib/python3.7/site-packages/sklearn/externals/joblib/externals/cloudpickle/cloudpickle.py:47: DeprecationWarning: the imp module is deprecated in favour of importlib; see the module&#39;s documentation for alternative uses
   import imp</span>
-<span class="ansi-blue-fg">2020-05-04 16:41:20,371 sagemaker-containers INFO     Reporting training SUCCESS</span>
+<span class="ansi-blue-fg">2020-05-05 11:08:46,314 sagemaker-containers INFO     Reporting training SUCCESS</span>
 
-2020-05-04 16:41:31 Uploading - Uploading generated training model
-2020-05-04 16:41:31 Completed - Training job completed
-Training seconds: 72
-Billable seconds: 72
-CPU times: user 561 ms, sys: 17.9 ms, total: 579 ms
-Wall time: 3min 42s
+2020-05-05 11:09:09 Uploading - Uploading generated training model
+2020-05-05 11:09:09 Completed - Training job completed
+Training seconds: 62
+Billable seconds: 62
+CPU times: user 411 ms, sys: 51 ms, total: 462 ms
+Wall time: 3min 12s
 </pre>
 </div>
 </div>
@@ -13717,7 +13726,7 @@ Wall time: 3min 42s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
@@ -13746,8 +13755,8 @@ Wall time: 3min 42s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>----------------------------!CPU times: user 470 ms, sys: 40.4 ms, total: 511 ms
-Wall time: 14min 22s
+<pre>---------------!CPU times: user 242 ms, sys: 18.6 ms, total: 261 ms
+Wall time: 7min 32s
 </pre>
 </div>
 </div>
@@ -13768,7 +13777,7 @@ Wall time: 14min 22s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13800,7 +13809,7 @@ Wall time: 14min 22s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># First: generate predicted, class labels</span>
@@ -13840,7 +13849,7 @@ Wall time: 14min 22s
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Second: calculate the test accuracy</span>
@@ -13870,10 +13879,10 @@ Wall time: 14min 22s
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.6
+<pre>1.0
 
 Predicted class labels: 
-[1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
+[1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 0 1 0 1 1 0 0]
 
 True class labels: 
 [1 1 1 1 1 1 0 0 0 0 0 0 1 1 1 1 1 1 0 1 0 1 1 0 0]
@@ -13887,7 +13896,7 @@ True class labels:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">test_y</span><span class="p">,</span> <span class="n">test_y_preds</span><span class="p">)</span>
@@ -13904,13 +13913,13 @@ True class labels:
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[38]:</div>
+    <div class="prompt output_prompt">Out[16]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>array([[ 0, 10],
+<pre>array([[10,  0],
        [ 0, 15]])</pre>
 </div>
 
@@ -13931,10 +13940,11 @@ True class labels:
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong> Answer</strong>:</p>
+<p>After i remove the standardscaler from the code, the accuracy is imporved to 100%.</p>
 <p>From the confusion matrix about we can see that:</p>
 
 <pre><code>- false positive: 0
-- false negative:  10
+- false negative:  0
 
 </code></pre>
 <p>We need more taining data.</p>
@@ -13969,7 +13979,7 @@ True class labels:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># uncomment and fill in the line below!</span>
@@ -13991,7 +14001,7 @@ True class labels:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># deleting bucket, uncomment lines below</span>
@@ -14001,6 +14011,62 @@ True class labels:
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[18]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[{&#39;ResponseMetadata&#39;: {&#39;RequestId&#39;: &#39;973A727248C2B5F7&#39;,
+   &#39;HostId&#39;: &#39;WsX8f2b6ebIejzRuOBoJkOV3Z0SIGPK7U1dxlYPcQ8SJPmnfH47K8vy53X/xwULlQNgbSA2992o=&#39;,
+   &#39;HTTPStatusCode&#39;: 200,
+   &#39;HTTPHeaders&#39;: {&#39;x-amz-id-2&#39;: &#39;WsX8f2b6ebIejzRuOBoJkOV3Z0SIGPK7U1dxlYPcQ8SJPmnfH47K8vy53X/xwULlQNgbSA2992o=&#39;,
+    &#39;x-amz-request-id&#39;: &#39;973A727248C2B5F7&#39;,
+    &#39;date&#39;: &#39;Tue, 05 May 2020 11:18:27 GMT&#39;,
+    &#39;connection&#39;: &#39;close&#39;,
+    &#39;content-type&#39;: &#39;application/xml&#39;,
+    &#39;transfer-encoding&#39;: &#39;chunked&#39;,
+    &#39;server&#39;: &#39;AmazonS3&#39;},
+   &#39;RetryAttempts&#39;: 0},
+  &#39;Deleted&#39;: [{&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-16-17-52-643/output/model.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-16-38-14-003/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-16-38-14-003/output/model.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-16-17-52-643/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-05-11-06-08-530/debug-output/training_job_end.ts&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-05-11-06-08-530/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-02-10-29-16-141/debug-output/training_job_end.ts&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-04-12-54-17-963/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-02-10-16-43-848/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-15-53-27-073/debug-output/training_job_end.ts&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-04-12-06-39-820/output/model.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-02-10-37-48-341/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-16-38-14-003/debug-output/training_job_end.ts&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-15-53-27-073/output/model.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker/sentiment_rnn/train.csv&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-15-53-27-073/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;plagiarism-detection-proj/test.csv&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-02-10-29-16-141/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-04-12-06-39-820/debug-output/training_job_end.ts&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-04-12-06-39-820/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-04-12-06-20-536/source/sourcedir.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-04-16-17-52-643/debug-output/training_job_end.ts&#39;},
+   {&#39;Key&#39;: &#39;sagemaker/sentiment_rnn/word_dict.pkl&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-scikit-learn-2020-05-05-11-06-08-530/output/model.tar.gz&#39;},
+   {&#39;Key&#39;: &#39;plagiarism-detection-proj/train.csv&#39;},
+   {&#39;Key&#39;: &#39;sagemaker-pytorch-2020-05-02-10-38-10-794/source/sourcedir.tar.gz&#39;}]}]</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
